@@ -54,10 +54,10 @@ def segment(image_path: Path, output_name: str) -> list[str]:
 
 
 def test_bananas_and_oranges_segmentation():
-    labels = segment(ASSETS / "bananas_and_oranges.jpg", "bananas_and_oranges_segmented.png")
+    labels = segment(ASSETS / "generated" / "bananas_and_oranges.jpg", "bananas_and_oranges_segmented.png")
     assert {"banana", "orange"} <= set(labels)
 
 
 def test_apples_and_carrots_segmentation():
-    labels = segment(ASSETS / "apples_and_carrots.jpg", "apples_and_carrots_segmented.png")
+    labels = segment(ASSETS / "generated" / "apples_and_carrots.jpg", "apples_and_carrots_segmented.png")
     assert {"apple", "carrot"} <= set(labels)
