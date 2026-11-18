@@ -1,8 +1,8 @@
 # ML Inference Server
 
-A FastAPI server that runs an **instance segmentation model** to detect the
-ingredients in a food image, uses the segmentation results to **estimate the
-weight** of each detected ingredient, and returns its **nutrient breakdown**.
+A FastAPI server that runs an instance segmentation model to detect the
+ingredients in a food image, uses the segmentation results to estimate the
+weight of each detected ingredient, and returns its nutrient breakdown.
 
 ## How it works
 
@@ -10,8 +10,7 @@ Send a photo of food; get back each detected food's estimated weight and
 nutrients, plus the total.
 
 **The photo must include a spoon.** The spoon is the size reference used to
-turn pixels into real-world sizes, so a photo without one is rejected. Shoot
-from straight above, with the spoon fully visible and not covered by food.
+turn pixels into real-world sizes, so a photo without one is rejected.
 
 Only the 10 food classes in the COCO dataset are supported: `banana`, `apple`,
 `sandwich`, `orange`, `broccoli`, `carrot`, `hot dog`, `pizza`, `donut`,
@@ -21,9 +20,6 @@ Only the 10 food classes in the COCO dataset are supported: `banana`, `apple`,
 
 - Python 3.14
 - [uv](https://docs.astral.sh/uv/)
-
-PyTorch is installed from the CPU-only wheel index (configured in
-`pyproject.toml`), so no GPU is required.
 
 ## Getting started
 
